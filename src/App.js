@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+//Setting up paths to each page within the single page we will navigate to.
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return(
+    <BrowserRouter>
+    <Switch>
+      <Route component= {Home} path="/" />
+      <Route component= {About} path="/about" />
+      <Route component= {SinglePost} path="/post/:slug" />
+      <Route component= {Post} path="/post" />
+      <Route component= {Project} path="/project" />
+
+    </Switch>
+    </BrowserRouter>
+  )
 }
 
 export default App;
