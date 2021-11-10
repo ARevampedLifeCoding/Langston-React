@@ -7,6 +7,7 @@ import Project from "./componets/Project";
 
 
 //Setting up paths to each page within the single page we will navigate to.
+// Using exact so the home page doesn't get confused with any other routes.
 function App() {
   return(
     <BrowserRouter>
